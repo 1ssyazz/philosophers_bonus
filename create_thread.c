@@ -6,7 +6,7 @@
 /*   By: msukri <msukri@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 14:53:46 by msukri            #+#    #+#             */
-/*   Updated: 2022/08/02 16:16:29 by msukri           ###   ########.fr       */
+/*   Updated: 2022/08/11 20:28:26 by msukri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,9 @@ void	ft_close_process(t_value *value)
 	if (WIFEXITED(status) || WIFSIGNALED(status))
 	{
 		while (i < value->philo)
+		{
+			sem_close(value->p[i]->sem_eat);
 			kill(value->p[i++]->philo_pid, SIGKILL);
+		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: msukri <msukri@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 14:53:59 by msukri            #+#    #+#             */
-/*   Updated: 2022/08/02 19:14:27 by msukri           ###   ########.fr       */
+/*   Updated: 2022/08/11 19:22:39 by msukri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,7 @@ void		ft_close_process(t_value *value);
 void		*routine(t_philo *philo);
 void		*monitor_die(void *philo);
 void		*ft_full(void *value);
+
+void		ft_sem_close(t_value *value);
 
 #endif
